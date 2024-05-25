@@ -147,5 +147,5 @@ class BertClassifier:
     
     def load(self, path):
 
-        self.model.load_state_dict(torch.load(path))
+        self.model.load_state_dict(torch.load(path, map_location='cpu'))
         self.model.eval()
